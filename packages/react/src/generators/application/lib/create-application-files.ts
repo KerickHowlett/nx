@@ -1,7 +1,7 @@
 import { NormalizedSchema } from '../schema';
 import { names, offsetFromRoot, Tree, toJS, generateFiles } from '@nrwl/devkit';
 import { join } from 'path';
-import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/typescript';
+import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/ts-config';
 import { createTsConfig } from '../../../utils/create-ts-config';
 import { getInSourceVitestTestsTemplate } from '../../../utils/get-in-source-vitest-tests-template';
 import { getAppTests } from './get-app-tests';

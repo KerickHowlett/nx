@@ -15,7 +15,7 @@ import {
   createTsConfig,
   extractTsConfigBase,
 } from '../../../utils/create-ts-config';
-import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/typescript';
+import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/ts-config';
 
 export function updateConfigFiles(host: Tree, options: NormalizedSchema) {
   if (!options.rootProject) {

@@ -11,7 +11,7 @@ import {
   updateProjectConfiguration,
 } from '@nrwl/devkit';
 import { jestProjectGenerator } from '@nrwl/jest';
-import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/typescript';
+import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/ts-config';
 import * as path from 'path';
 
 import type { Tree } from '@nrwl/devkit';

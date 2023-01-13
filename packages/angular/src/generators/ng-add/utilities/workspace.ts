@@ -14,7 +14,7 @@ import { Linter, lintInitGenerator } from '@nrwl/linter';
 import { DEFAULT_NRWL_PRETTIER_CONFIG } from '@nrwl/workspace/src/generators/new/generate-workspace-files';
 import { deduceDefaultBase } from '@nrwl/workspace/src/utilities/default-base';
 import { resolveUserExistingPrettierConfig } from '@nrwl/workspace/src/utilities/prettier';
-import { getRootTsConfigPathInTree } from '@nrwl/workspace/src/utilities/typescript';
+import { getRootTsConfigPathInTree } from '@nrwl/workspace/src/utilities/ts-config';
 import { prettierVersion } from '@nrwl/workspace/src/utils/versions';
 import { angularDevkitVersion, nxVersion } from '../../../utils/versions';
 import type { ProjectMigrator } from '../migrators';

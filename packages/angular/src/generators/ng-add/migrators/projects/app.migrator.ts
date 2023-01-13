@@ -6,7 +6,7 @@ import {
   updateProjectConfiguration,
 } from '@nrwl/devkit';
 import { convertToNxProjectGenerator } from '@nrwl/workspace/generators';
-import { getRootTsConfigPathInTree } from '@nrwl/workspace/src/utilities/typescript';
+import { getRootTsConfigPathInTree } from '@nrwl/workspace/src/utilities/ts-config';
 import { basename } from 'path';
 import type { GeneratorOptions } from '../../schema';
 import type {

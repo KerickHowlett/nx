@@ -5,7 +5,7 @@ import {
   createStyleRules,
 } from './create-application-files.helpers';
 import { generateFiles, names, toJS, Tree } from '@nrwl/devkit';
-import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/typescript';
+import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/ts-config';
 
 export function createApplicationFiles(host: Tree, options: NormalizedSchema) {
   const templateVariables = {

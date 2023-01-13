@@ -1,6 +1,6 @@
 {
   "name": "library",
-  "factory": "./src/generators/library/library#libraryGenerator",
+  "factory": "./src/generators/library/library#jsLibraryGenerator",
   "schema": {
     "$schema": "http://json-schema.org/schema",
     "$id": "NxTypescriptLibrary",
@@ -113,6 +113,12 @@
         "type": "boolean",
         "description": "Whether to skip TypeScript type checking for SWC compiler.",
         "default": false
+      },
+      "skipPackageJson": {
+        "type": "boolean",
+        "default": false,
+        "description": "Do not add dependencies to `package.json`.",
+        "x-priority": "internal"
       }
     },
     "required": ["name"],
@@ -122,7 +128,7 @@
   "aliases": ["lib"],
   "x-type": "library",
   "description": "Create a library",
-  "implementation": "/packages/js/src/generators/library/library#libraryGenerator.ts",
+  "implementation": "/packages/js/src/generators/library/library#jsLibraryGenerator.ts",
   "hidden": false,
   "path": "/packages/js/src/generators/library/schema.json",
   "type": "generator"

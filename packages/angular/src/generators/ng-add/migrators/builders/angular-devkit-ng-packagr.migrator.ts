@@ -9,7 +9,7 @@ import {
   updateJson,
   updateProjectConfiguration,
 } from '@nrwl/devkit';
-import { getRootTsConfigPathInTree } from '@nrwl/workspace/src/utilities/typescript';
+import { getRootTsConfigPathInTree } from '@nrwl/workspace/src/utilities/ts-config';
 import { basename } from 'path';
 import { addBuildableLibrariesPostCssDependencies } from '../../../utils/dependencies';
 import type { Logger, ProjectMigrationInfo } from '../../utilities';

@@ -3,18 +3,18 @@
   "version": "0.1",
   "schematics": {
     "library": {
-      "factory": "./src/generators/library/library#librarySchematic",
+      "factory": "./src/generators/library/library#jsLibrarySchematic",
       "schema": "./src/generators/library/schema.json",
       "aliases": ["lib"],
       "x-type": "library",
       "description": "Create a library."
     },
     "init": {
-      "factory": "./src/generators/init/init#initSchematic",
+      "factory": "./src/generators/init/init#jsInitSchematic",
       "schema": "./src/generators/init/schema.json",
       "aliases": ["lib"],
       "x-type": "init",
-      "description": "Init placeholder.",
+      "description": "Initial a TS/JS workspace.",
       "hidden": true
     },
     "convert-to-swc": {
@@ -27,18 +27,18 @@
   },
   "generators": {
     "library": {
-      "factory": "./src/generators/library/library#libraryGenerator",
+      "factory": "./src/generators/library/library#jsLibraryGenerator",
       "schema": "./src/generators/library/schema.json",
       "aliases": ["lib"],
       "x-type": "library",
       "description": "Create a library"
     },
     "init": {
-      "factory": "./src/generators/init/init#initGenerator",
+      "factory": "./src/generators/init/init#jsInitGenerator",
       "schema": "./src/generators/init/schema.json",
       "aliases": ["lib"],
       "x-type": "init",
-      "description": "Init placeholder.",
+      "description": "Initial a TS/JS workspace.",
       "hidden": true
     },
     "convert-to-swc": {

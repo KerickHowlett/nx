@@ -12,7 +12,7 @@ import { replaceAppNameWithPath } from '@nrwl/workspace/src/utils/cli-config-uti
 import { E2eTestRunner, UnitTestRunner } from '../../../utils/test-runners';
 import type { NormalizedSchema } from './normalized-schema';
 import { createTsConfig } from '../../utils/create-ts-config';
-import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/typescript';
+import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/ts-config';
 
 export function updateConfigFiles(host: Tree, options: NormalizedSchema) {
   updateTsConfigOptions(host, options);

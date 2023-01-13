@@ -20,7 +20,7 @@ import {
   toJS,
   Tree,
 } from '@nrwl/devkit';
-import { getRootTsConfigPathInTree } from '@nrwl/workspace/src/utilities/typescript';
+import { getRootTsConfigPathInTree } from '@nrwl/workspace/src/utilities/ts-config';
 
 export async function reduxGenerator(host: Tree, schema: Schema) {
   const options = normalizeOptions(host, schema);

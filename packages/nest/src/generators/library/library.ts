@@ -1,6 +1,6 @@
 import type { GeneratorCallback, Tree } from '@nrwl/devkit';
 import { convertNxGenerator, formatFiles } from '@nrwl/devkit';
-import { libraryGenerator as jsLibraryGenerator } from '@nrwl/js';
+import { jsLibraryGenerator } from '@nrwl/js';
 import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-serial';
 import { addDependencies } from '../init/lib';
 import {

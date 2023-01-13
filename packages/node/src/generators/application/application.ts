@@ -29,7 +29,7 @@ import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-ser
 
 import { Schema } from './schema';
 import { initGenerator } from '../init/init';
-import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/typescript';
+import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/ts-config';
 import {
   connectTypingsVersion,
   connectVersion,

@@ -7,7 +7,7 @@ import {
   removeDependenciesFromPackageJson,
   Tree,
 } from '@nrwl/devkit';
-import { jestInitGenerator } from '@nrwl/jest';
+import { jestInitGenerator } from '@nrwl/jest/generators';
 import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-serial';
 import {
   nxVersion,
@@ -16,6 +16,7 @@ import {
 } from '../../utils/versions';
 import { Schema } from './schema';
 import { addBabelInputs } from '@nrwl/js/src/utils/add-babel-inputs';
+import { jsInitGenerator } from '@nrwl/js/generators';
 
 function updateDependencies(tree: Tree, schema: Schema) {
   removeDependenciesFromPackageJson(tree, ['@nrwl/web'], []);
@@ -41,7 +42,12 @@ function updateDependencies(tree: Tree, schema: Schema) {
 }
 
 export async function webInitGenerator(tree: Tree, schema: Schema) {
-  let tasks: GeneratorCallback[] = [];
+  let tasks: GeneratorCallback[] = [
+    jsInitGenerator(tree, {
+      skipPackageJson: schema.skipPackageJson,
+      skipTsConfig: schema.skipTsConfig,
+    }),
+  ];
 
   if (!schema.unitTestRunner || schema.unitTestRunner === 'jest') {
     const jestTask = jestInitGenerator(tree, {

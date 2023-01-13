@@ -308,6 +308,7 @@ export function getSelectedPackageManager(): 'npm' | 'yarn' | 'pnpm' {
 export function newProject({
   name = uniq('proj'),
   packageManager = getSelectedPackageManager(),
+  preset = 'empty',
 } = {}): string {
   try {
     const useBackupProject = packageManager !== 'pnpm';
@@ -315,7 +316,7 @@ export function newProject({
 
     if (!useBackupProject || !directoryExists(tmpBackupProjPath())) {
       runCreateWorkspace(projScope, {
-        preset: 'empty',
+        preset,
         packageManager,
       });
 

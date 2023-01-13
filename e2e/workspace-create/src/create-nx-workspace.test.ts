@@ -77,16 +77,6 @@ describe('create-nx-workspace', () => {
     expectNoAngularDevkit();
   });
 
-  it('should be able to create an empty workspace with ts/js capabilities', () => {
-    const wsName = uniq('ts');
-    runCreateWorkspace(wsName, {
-      preset: 'npm',
-      packageManager,
-    });
-
-    expectNoAngularDevkit();
-  });
-
   it('should be able to create an angular workspace', () => {
     const wsName = uniq('angular');
     const appName = uniq('app');

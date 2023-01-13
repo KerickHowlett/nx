@@ -22,7 +22,7 @@ import { Schema } from './schema';
 import {
   getRelativePathToRootTsConfig,
   getRootTsConfigPathInTree,
-} from '@nrwl/workspace/src/utilities/typescript';
+} from '@nrwl/workspace/src/utilities/ts-config';
 
 export async function reactNativeLibraryGenerator(
   host: Tree,

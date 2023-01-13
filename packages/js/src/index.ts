@@ -4,4 +4,5 @@ export * from './utils/typescript/run-type-check';
 export * from './utils/package-json';
 export * from './utils/assets';
 export * from './utils/package-json/update-package-json';
-export { libraryGenerator } from './generators/library/library';
+export { jsLibraryGenerator } from './generators/library/library';
+export { jsInitGenerator } from './generators/init/init';

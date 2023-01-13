@@ -6,7 +6,7 @@ import {
   offsetFromRoot,
   toJS,
 } from '@nrwl/devkit';
-import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/typescript';
+import { getRelativePathToRootTsConfig } from '@nrwl/workspace/src/utilities/ts-config';
 
 import { NormalizedSchema } from '../schema';
 import { createTsConfig } from '../../../utils/create-ts-config';

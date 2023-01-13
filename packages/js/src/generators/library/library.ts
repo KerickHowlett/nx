@@ -24,7 +24,7 @@ import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-ser
 import {
   getRelativePathToRootTsConfig,
   getRootTsConfigPathInTree,
-} from '@nrwl/workspace/src/utilities/typescript';
+} from '@nrwl/workspace/src/utilities/ts-config';
 import { join } from 'path';
 import { addMinimalPublishScript } from '../../utils/minimal-publish-script';
 import { LibraryGeneratorSchema } from '../../utils/schema';
@@ -35,8 +35,9 @@ import {
   nxVersion,
   typesNodeVersion,
 } from '../../utils/versions';
+import jsInitGenerator from '../init/init';
 
-export async function libraryGenerator(
+export async function jsLibraryGenerator(
   tree: Tree,
   schema: LibraryGeneratorSchema
 ) {
@@ -54,7 +55,12 @@ export async function projectGenerator(
   destinationDir: string,
   filesDir: string
 ) {
-  const tasks: GeneratorCallback[] = [];
+  const tasks: GeneratorCallback[] = [
+    jsInitGenerator(tree, {
+      skipPackageJson: schema.skipPackageJson,
+      skipTsConfig: schema.skipTsConfig,
+    }),
+  ];
   const options = normalizeOptions(tree, schema, destinationDir);
 
   createFiles(tree, options, `${filesDir}/lib`);
@@ -516,5 +522,5 @@ function ensureBabelRootConfigExists(tree: Tree) {
   });
 }
 
-export default libraryGenerator;
-export const librarySchematic = convertNxGenerator(libraryGenerator);
+export default jsLibraryGenerator;
+export const jsLibrarySchematic = convertNxGenerator(jsLibraryGenerator);
